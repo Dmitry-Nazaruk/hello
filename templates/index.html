@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% block body %}
+
+  <form action="" class="form-control" method="POST">
+    {{ form.napravlenie.label() }} {{ form.napravlenie() }}<br>
+    {{ form.step.label() }} {{ form.step() }}<br>
+    {{ form.submit  }}<br>
+  </form>
+
+{% for i in result %}
+  <div class="step">{{i}}</div><br>
+{% endfor %}
+<button>
+  <a href="/">Reset</a>
+</button>
+ <div class="img"><img src="https://ucarecdn.com/1e8d0bed-5073-4202-885f-a9b1a36425c1/" alt="" width="50%"></div>
+{% endblock %}
